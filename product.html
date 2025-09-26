@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Clothing - Products</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">City Clothing</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">🛒 Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Products</h2>
+
+    <div class="products">
+      <div class="product-card">
+        <img src="../images/jacket.jpg.jpeg" alt="Trendy Jacket">
+        <h3>Trendy Jacket</h3>
+        <p>Price: R450.00</p>
+        <button class="add-to-cart" data-name="Trendy Jacket" data-price="450">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../images/sneaker.jpg.jpeg" alt="Stylish Sneakers">
+        <h3>Stylish Sneakers</h3>
+        <p>Price: R650.00</p>
+        <button class="add-to-cart" data-name="Stylish Sneakers" data-price="650">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="../images/summer-dress.jpg.jpeg" alt="Summer Dress">
+        <h3>Summer Dress</h3>
+        <p>Price: R350.00</p>
+        <button class="add-to-cart" data-name="Summer Dress" data-price="350">Add to Cart</button>
+      </div>
+    </div>
+
+    <aside>
+      <h2>Shopping Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: R0.00</p>
+      <button id="checkout">Checkout</button>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>City Clothing</h3>
+        <p>Fashion for urban lifestyles. Quality clothing at affordable prices.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="index.html" style="color: white;">Home</a></p>
+        <p><a href="product.html" style="color: white;">Products</a></p>
+        <p><a href="about.html" style="color: white;">About Us</a></p>
+        <p><a href="contact.html" style="color: white;">Contact</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
+        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+        <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 City Clothing. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

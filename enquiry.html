@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>City Clothing | Enquiry</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+        <h1 class="logo">City Clothing</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">🛒 Cart</a></li>
+        </ul>
+    </nav>
+</header>
+  <section class="enquiry">
+    <h2>Send an Enquiry</h2>
+    <p>For product questions, order help, or service enquiries, fill out the form below and we’ll get back to you.</p>
+
+    <form id="enquiryForm" class="contact-form" novalidate>
+      <div class="form-row">
+        <label for="enquiryType">Enquiry type</label>
+        <select id="enquiryType" required>
+          <option value="">Select…</option>
+          <option>Product question</option>
+          <option>Order help</option>
+          <option>Service enquiry</option>
+          <option>General enquiry</option>
+        </select>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label for="fullName">Full name</label>
+          <input id="fullName" type="text" placeholder="Your full name" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+        </div>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" type="tel" placeholder="+27 82 123 4567" />
+        </div>
+        <div>
+          <label for="orderNumber">Order # (optional)</label>
+          <input id="orderNumber" type="text" placeholder="e.g. CC-12345" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="subject">Subject</label>
+        <input id="subject" type="text" placeholder="Brief subject" required />
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" rows="6" placeholder="Tell us more…" required></textarea>
+      </div>
+
+      <div class="form-row checkbox-row">
+        <label>
+          <input id="consent" type="checkbox" required />
+          I consent to City Clothing using my details to respond to this enquiry.
+        </label>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn">Submit Enquiry</button>
+        <button type="reset" class="btn btn-secondary">Clear</button>
+      </div>
+
+      <div id="enquirySuccess" class="alert success" style="display:none;"></div>
+      <div id="enquiryError" class="alert error" style="display:none;"></div>
+    </form>
+
+    <p class="muted small">
+      Tip: Submissions are saved to your browser (local device) for testing. We can wire this up to email or a database later.
+    </p>
+  </section>
+
+  <script src="enquiry.js"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>City Clothing</h3>
+        <p>Fashion for urban lifestyles. Quality clothing at affordable prices.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <p><a href="index.html" style="color: white;">Home</a></p>
+        <p><a href="product.html" style="color: white;">Products</a></p>
+        <p><a href="about.html" style="color: white;">About Us</a></p>
+        <p><a href="contact.html" style="color: white;">Contact</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
+        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+        <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 City Clothing. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+        
+        if (menuToggle) {
+            menuToggle.innerHTML = '☰';
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>
