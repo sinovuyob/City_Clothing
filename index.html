@@ -1,113 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>City Clothing | Home</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Clothing | Premium Urban Fashion & Streetwear Collection</title>
+    <meta name="description" content="Discover City Clothing's premium urban fashion collection. Shop trendy streetwear, jackets, sneakers, and accessories with free shipping over R500.">
+    <meta name="keywords" content="urban fashion, streetwear, city clothing, sneakers, jackets, urban style">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <nav>
-        <h1 class="logo">City Clothing</h1>
+
+<header>
+    <nav class="container">
+        <a href="index.html" class="logo">City <span>Clothing</span></a>
         <button class="menu-toggle" aria-label="Toggle menu">☰</button>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="product.html">Products</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html">🛒 Cart</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="cart.html" class="cart-link">🛒 Cart <span class="cart-count">0</span></a></li>
         </ul>
     </nav>
 </header>
 
-  <section class="hero">
-    <h2>Stay On Trend</h2>
-    <p>High-quality fashion at competitive prices. Discover the latest trends today.</p>
-    <a href="product.html" class="btn">Shop Now</a>
-  </section>
-
-  <section class="featured">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="../images/jacket.jpg.jpeg" alt="Jacket">
-        <h3>Stylish Jacket</h3>
-        <p>R450.00</p>
-        <a href="product.html" class="btn">View More</a>
-      </div>
-      <div class="product-card">
-        <img src="../images/sneaker.jpg.jpeg" alt="Stylish Sneakers">
-        <h3>Stylish Sneaker</h3>
-        <p>R650.00</p>
-        <a href="product.html" class="btn">View More</a>
-      </div>
-      <div class="product-card">
-        <img src="../images/summer-dress.jpg.jpeg" alt="Dress">
-        <h3>Summer Dress</h3>
-        <p>R350.00</p>
-        <a href="product.html" class="btn">View More</a>
-      </div>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h2>Elevate Your Urban Style</h2>
+        <p>Discover the latest trends in streetwear and urban fashion. Quality clothing that makes a statement.</p>
+        <a href="product.html" class="btn">Shop Collection</a>
     </div>
-  </section>
+</section>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>City Clothing</h3>
-        <p>Fashion for urban lifestyles. Quality clothing at affordable prices.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <p><a href="index.html" style="color: white;">Home</a></p>
-        <p><a href="product.html" style="color: white;">Products</a></p>
-        <p><a href="about.html" style="color: white;">About Us</a></p>
-        <p><a href="contact.html" style="color: white;">Contact</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Info</h3>
-        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
-        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
-        <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
+<!-- Featured Products -->
+<section class="featured">
+    <div class="container">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="product-grid">
+            <div class="product-card" data-category="shirts">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Urban Shirt">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="1">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Urban Shirt</h3>
+                    <p class="product-category">Shirts</p>
+                    <p class="product-price">R299.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Urban Shirt" data-price="299" data-image="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="jackets">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Leather Jacket">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="2">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Leather Jacket</h3>
+                    <p class="product-category">Jackets</p>
+                    <p class="product-price">R899.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Leather Jacket" data-price="899" data-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="footwear">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="City Sneakers">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="3">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>City Sneakers</h3>
+                    <p class="product-category">Footwear</p>
+                    <p class="product-price">R499.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="City Sneakers" data-price="499" data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="accessories">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fashion Hat">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="4">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Fashion Hat</h3>
+                    <p class="product-category">Accessories</p>
+                    <p class="product-price">R199.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Fashion Hat" data-price="199" data-image="https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="load-more-container">
+            <a href="product.html" class="btn btn-outline">View All Products</a>
+        </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 City Clothing. All rights reserved.</p>
-    </div>
-  </footer>
-  <script>
-    // Mobile menu toggle functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
-        
-        if (menuToggle) {
-            menuToggle.innerHTML = '☰';
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        }
-        
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-            });
-        });
-    });
-    </script>
+</section>
 
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <div>
+                    <h3>Free Shipping</h3>
+                    <p>Free delivery on orders over R1,500</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-undo"></i>
+                </div>
+                <div>
+                    <h3>30-Day Returns</h3>
+                    <p>Easy returns within 30 days</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div>
+                    <h3>Secure Payment</h3>
+                    <p>Your payment information is safe</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <div>
+                    <h3>24/7 Support</h3>
+                    <p>Get help whenever you need it</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <h2>Join Our Style Community</h2>
+        <p>Subscribe to get exclusive offers, style tips, and early access to new collections.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>City Clothing</h3>
+                <p>Your destination for premium urban fashion and streetwear. Quality meets style in every stitch.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <p><a href="product.html">All Products</a></p>
+                <p><a href="product.html">New Arrivals</a></p>
+                <p><a href="product.html">Best Sellers</a></p>
+                <p><a href="product.html">Sale Items</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="enquiry.html">FAQ</a></p>
+                <p><a href="enquiry.html">Shipping Info</a></p>
+                <p><a href="enquiry.html">Returns</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
+                <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 City Clothing. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Quick View Modal -->
+<div class="overlay"></div>
+<div class="quick-view-modal">
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="modal-body">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
