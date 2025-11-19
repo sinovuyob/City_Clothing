@@ -1,96 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>City Clothing - Products</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Fashion Collection | City Clothing Products</title>
+    <meta name="description" content="Browse our complete urban fashion collection. Men's and women's streetwear, jackets, footwear, and accessories. 30-day returns guaranteed.">
+    <meta name="keywords" content="urban fashion collection, streetwear products, city clothing products, men's fashion, women's fashion">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <nav>
-      <h1 class="logo">City Clothing</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="cart.html">🛒 Cart</a></li>
-      </ul>
+
+<header>
+    <nav class="container">
+        <a href="index.html" class="logo">City <span>Clothing</span></a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html" class="active">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="cart.html" class="cart-link">🛒 Cart <span class="cart-count">0</span></a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <h2>Our Products</h2>
-
-    <div class="products">
-      <div class="product-card">
-        <img src="../images/jacket.jpg.jpeg" alt="Trendy Jacket">
-        <h3>Trendy Jacket</h3>
-        <p>Price: R450.00</p>
-        <button class="add-to-cart" data-name="Trendy Jacket" data-price="450">Add to Cart</button>
-      </div>
-
-      <div class="product-card">
-        <img src="../images/sneaker.jpg.jpeg" alt="Stylish Sneakers">
-        <h3>Stylish Sneakers</h3>
-        <p>Price: R650.00</p>
-        <button class="add-to-cart" data-name="Stylish Sneakers" data-price="650">Add to Cart</button>
-      </div>
-
-      <div class="product-card">
-        <img src="../images/summer-dress.jpg.jpeg" alt="Summer Dress">
-        <h3>Summer Dress</h3>
-        <p>Price: R350.00</p>
-        <button class="add-to-cart" data-name="Summer Dress" data-price="350">Add to Cart</button>
-      </div>
+<!-- Products Hero Section -->
+<section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+    <div class="container">
+        <h1>Our Collection</h1>
+        <p>Discover urban fashion that speaks your language. Quality pieces for every occasion.</p>
     </div>
+</section>
 
-    <aside>
-      <h2>Shopping Cart</h2>
-      <ul id="cart-items"></ul>
-      <p id="cart-total">Total: R0.00</p>
-      <button id="checkout">Checkout</button>
-    </aside>
-  </main>
+<!-- Products Section -->
+<section class="products-section">
+    <div class="container">
+        <!-- Filter and Sort Options -->
+        <div class="products-controls">
+            <div class="filter-section">
+                <h3>Shop by Category</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="shirts">Shirts & Tops</button>
+                    <button class="filter-btn" data-filter="jackets">Jackets</button>
+                    <button class="filter-btn" data-filter="footwear">Footwear</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                    <button class="filter-btn" data-filter="bottoms">Bottoms</button>
+                </div>
+            </div>
+            
+            <div class="sort-section">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select" class="sort-select">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                    <option value="newest">Newest First</option>
+                </select>
+            </div>
 
-  <script src="script.js"></script>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>City Clothing</h3>
-        <p>Fashion for urban lifestyles. Quality clothing at affordable prices.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <p><a href="index.html" style="color: white;">Home</a></p>
-        <p><a href="product.html" style="color: white;">Products</a></p>
-        <p><a href="about.html" style="color: white;">About Us</a></p>
-        <p><a href="contact.html" style="color: white;">Contact</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Info</h3>
-        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
-        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
-        <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
+            <div class="search-section">
+                <input type="text" id="product-search" class="product-search" placeholder="Search products...">
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 City Clothing. All rights reserved.</p>
-    </div>
-  </footer>
 
+        <!-- Products Grid -->
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="shirts">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Urban Shirt">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="1">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Urban Shirt</h3>
+                    <p class="product-category">Shirts</p>
+                    <p class="product-price">R299.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Urban Shirt" data-price="299" data-image="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-category="jackets">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Leather Jacket">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="2">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Leather Jacket</h3>
+                    <p class="product-category">Jackets</p>
+                    <p class="product-price">R899.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Leather Jacket" data-price="899" data-image="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-category="footwear">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="City Sneakers">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="3">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>City Sneakers</h3>
+                    <p class="product-category">Footwear</p>
+                    <p class="product-price">R499.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="City Sneakers" data-price="499" data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card" data-category="accessories">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Fashion Hat">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="4">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Fashion Hat</h3>
+                    <p class="product-category">Accessories</p>
+                    <p class="product-price">R199.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Fashion Hat" data-price="199" data-image="https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card" data-category="bottoms">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Slim Jeans">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="5">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Slim Jeans</h3>
+                    <p class="product-category">Bottoms</p>
+                    <p class="product-price">R349.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Slim Jeans" data-price="349" data-image="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="shirts">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Urban Hoodie">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="6">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Urban Hoodie</h3>
+                    <p class="product-category">Shirts</p>
+                    <p class="product-price">R399.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Urban Hoodie" data-price="399" data-image="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card" data-category="jackets">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bomber Jacket">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="7">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Bomber Jacket</h3>
+                    <p class="product-category">Jackets</p>
+                    <p class="product-price">R799.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Bomber Jacket" data-price="799" data-image="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card" data-category="footwear">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Classic Sneakers">
+                    <div class="product-overlay">
+                        <button class="quick-view" data-product="8">Quick View</button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Classic Sneakers</h3>
+                    <p class="product-category">Footwear</p>
+                    <p class="product-price">R459.00</p>
+                    <div class="product-actions">
+                        <button class="btn add-to-cart" data-name="Classic Sneakers" data-price="459" data-image="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="load-more-container">
+            <button class="btn btn-outline load-more">Load More Products</button>
+        </div>
+    </div>
+</section>
+
+<!-- Features Banner -->
+<section class="features">
+    <div class="container">
+        <div class="info-cards">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <div>
+                    <h3>Premium Quality</h3>
+                    <p>All our products are made with premium materials for lasting comfort and style.</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div>
+                    <h3>Designed with Love</h3>
+                    <p>Each piece is carefully designed to reflect the latest urban fashion trends.</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>Not happy with your purchase? We offer easy 30-day returns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>City Clothing</h3>
+                <p>Your destination for premium urban fashion and streetwear. Quality meets style in every stitch.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <p><a href="product.html">All Products</a></p>
+                <p><a href="product.html">New Arrivals</a></p>
+                <p><a href="product.html">Best Sellers</a></p>
+                <p><a href="product.html">Sale Items</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="enquiry.html">FAQ</a></p>
+                <p><a href="enquiry.html">Shipping Info</a></p>
+                <p><a href="enquiry.html">Returns</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
+                <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 City Clothing. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Quick View Modal -->
+<div class="overlay"></div>
+<div class="quick-view-modal">
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <div class="modal-body">
+            <!-- Content will be populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
