@@ -1,48 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>City Clothing | Contact</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - City Clothing | Get In Touch</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <nav>
-        <h1 class="logo">City Clothing</h1>
+
+<header>
+    <nav class="container">
+        <a href="index.html" class="logo">City <span>Clothing</span></a>
         <button class="menu-toggle" aria-label="Toggle menu">☰</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="product.html">Products</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html">🛒 Cart</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="#" class="cart-link">🛒 Cart <span class="cart-count">0</span></a></li>
         </ul>
     </nav>
 </header>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you! Reach out to us through the details below:</p>
-
-    <div class="contact-info">
-      <p><strong>Address:</strong> 123 Fashion Street, Cape Town, South Africa</p>
-      <p><strong>Email:</strong> info@cityclothing.com</p>
-      <p><strong>Business Hours:</strong> Mon – Sat, 9am – 6pm</p>
+<!-- Contact Hero Section -->
+<section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <p>We're here to help! Reach out with any questions or feedback.</p>
     </div>
+</section>
 
-    <h3>Send us a Message</h3>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+<!-- Contact Section -->
+<section class="featured" style="padding: 5rem 0;">
+    <div class="container">
+        <div class="contact-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+            <div class="contact-info">
+                <h2 style="margin-bottom: 2rem; font-size: 2rem; color: #333;">Visit Our Store</h2>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>123 Fashion Street, City Center</p>
+                            <span>Easy to find with plenty of parking</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>(012) 345-6789</p>
+                            <span>Mon-Fri, 9AM-6PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@cityclothing.com</p>
+                            <span>We respond within 24 hours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Customer Support</h4>
+                            <p>support@cityclothing.com</p>
+                            <span>For order and product inquiries</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="store-hours">
+                    <h3>Store Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Monday - Friday</span>
+                            <span class="time">9:00 AM - 6:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Saturday</span>
+                            <span class="time">10:00 AM - 5:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Sunday</span>
+                            <span class="time">11:00 AM - 4:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Public Holidays</span>
+                            <span class="time">Closed</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name *</label>
+                        <input type="text" id="name" class="form-input" required>
+                        <div class="form-error" id="nameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail" class="form-label">Email Address *</label>
+                        <input type="email" id="contactEmail" class="form-input" required>
+                        <div class="form-error" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input">
+                        <div class="form-error" id="phoneError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject *</label>
+                        <input type="text" id="subject" class="form-input" required>
+                        <div class="form-error" id="subjectError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactMessage" class="form-label">Message *</label>
+                        <textarea id="contactMessage" class="form-textarea" rows="6" required></textarea>
+                        <div class="form-error" id="messageError"></div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                        <button type="reset" class="btn btn-outline">
+                            <i class="fas fa-redo"></i>
+                            Reset Form
+                        </button>
+                    </div>
+                    
+                    <div id="contactAlert" class="alert" style="display:none;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <h3>Find Us</h3>
-    <div class="map-placeholder">
+<section class="map-section">
+        <div class="map-placeholder">
+            <h2 class="section-title">Find Us Here</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.26880275994!2d18.42183587531808!3d-33.91962362250937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc676be67b6a5f%3A0x2748f16b10f59cd2!2sRosebank%20College%20Cape%20Town!5e0!3m2!1sen!2sza!4v1693123456789"
   width="100%" 
   height="450" 
@@ -52,70 +168,74 @@
   referrerpolicy="no-referrer-when-downgrade">
 </iframe>
     </div>
+</section>
 
-    <h3>Follow Us</h3>
-    <p>
-      <a href="#">Facebook</a> | 
-      <a href="#">Instagram</a> | 
-      <a href="#">Twitter</a>
-    </p>
-  </section>
-
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>City Clothing</h3>
-        <p>Fashion for urban lifestyles. Quality clothing at affordable prices.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <p><a href="index.html" style="color: white;">Home</a></p>
-        <p><a href="product.html" style="color: white;">Products</a></p>
-        <p><a href="about.html" style="color: white;">About Us</a></p>
-        <p><a href="contact.html" style="color: white;">Contact</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Info</h3>
-        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
-        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
-        <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>What is your return policy?</h3>
+                <p>We offer a 30-day return policy for all unworn items with original tags. Returns are free for store credit, or you can exchange for a different size/color.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does shipping take?</h3>
+                <p>Standard shipping takes 3-5 business days. Express shipping (1-2 business days) is available for an additional fee. International shipping times vary by location.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer international shipping?</h3>
+                <p>Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary depending on the destination.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I track my order?</h3>
+                <p>Once your order ships, you'll receive a tracking number via email. You can use this to track your package on our website or the carrier's site.</p>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 City Clothing. All rights reserved.</p>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>City Clothing</h3>
+                <p>Your destination for premium urban fashion and streetwear. Quality meets style in every stitch.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <p><a href="product.html">All Products</a></p>
+                <p><a href="product.html">New Arrivals</a></p>
+                <p><a href="product.html">Best Sellers</a></p>
+                <p><a href="product.html">Sale Items</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="enquiry.html">FAQ</a></p>
+                <p><a href="enquiry.html">Shipping Info</a></p>
+                <p><a href="enquiry.html">Returns</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
+                <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 City Clothing. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
     </div>
-  </footer>
-  <script>
-    // Mobile menu toggle functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
-        
-        if (menuToggle) {
-            menuToggle.innerHTML = '☰';
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        }
-        
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-            });
-        });
-    });
-    </script>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
