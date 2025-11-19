@@ -1,153 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>City Clothing | Enquiry</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry - City Clothing | Get Assistance</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <nav>
-        <h1 class="logo">City Clothing</h1>
+
+<header>
+    <nav class="container">
+        <a href="index.html" class="logo">City <span>Clothing</span></a>
         <button class="menu-toggle" aria-label="Toggle menu">☰</button>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="product.html">Products</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="cart.html">🛒 Cart</a></li>
+            <li><a href="enquiry.html" class="active">Enquiry</a></li>
+            <li><a href="#" class="cart-link">🛒 Cart <span class="cart-count">0</span></a></li>
         </ul>
     </nav>
 </header>
-  <section class="enquiry">
-    <h2>Send an Enquiry</h2>
-    <p>For product questions, order help, or service enquiries, fill out the form below and we’ll get back to you.</p>
 
-    <form id="enquiryForm" class="contact-form" novalidate>
-      <div class="form-row">
-        <label for="enquiryType">Enquiry type</label>
-        <select id="enquiryType" required>
-          <option value="">Select…</option>
-          <option>Product question</option>
-          <option>Order help</option>
-          <option>Service enquiry</option>
-          <option>General enquiry</option>
-        </select>
-      </div>
-
-      <div class="form-row two-col">
-        <div>
-          <label for="fullName">Full name</label>
-          <input id="fullName" type="text" placeholder="Your full name" required />
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="you@example.com" required />
-        </div>
-      </div>
-
-      <div class="form-row two-col">
-        <div>
-          <label for="phone">Phone (optional)</label>
-          <input id="phone" type="tel" placeholder="+27 82 123 4567" />
-        </div>
-        <div>
-          <label for="orderNumber">Order # (optional)</label>
-          <input id="orderNumber" type="text" placeholder="e.g. CC-12345" />
-        </div>
-      </div>
-
-      <div class="form-row">
-        <label for="subject">Subject</label>
-        <input id="subject" type="text" placeholder="Brief subject" required />
-      </div>
-
-      <div class="form-row">
-        <label for="message">Message</label>
-        <textarea id="message" rows="6" placeholder="Tell us more…" required></textarea>
-      </div>
-
-      <div class="form-row checkbox-row">
-        <label>
-          <input id="consent" type="checkbox" required />
-          I consent to City Clothing using my details to respond to this enquiry.
-        </label>
-      </div>
-
-      <div class="form-actions">
-        <button type="submit" class="btn">Submit Enquiry</button>
-        <button type="reset" class="btn btn-secondary">Clear</button>
-      </div>
-
-      <div id="enquirySuccess" class="alert success" style="display:none;"></div>
-      <div id="enquiryError" class="alert error" style="display:none;"></div>
-    </form>
-
-    <p class="muted small">
-      Tip: Submissions are saved to your browser (local device) for testing. We can wire this up to email or a database later.
-    </p>
-  </section>
-
-  <script src="enquiry.js"></script>
-
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>City Clothing</h3>
-        <p>Fashion for urban lifestyles. Quality clothing at affordable prices.</p>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <p><a href="index.html" style="color: white;">Home</a></p>
-        <p><a href="product.html" style="color: white;">Products</a></p>
-        <p><a href="about.html" style="color: white;">About Us</a></p>
-        <p><a href="contact.html" style="color: white;">Contact</a></p>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Info</h3>
-        <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
-        <p><i class="fas fa-phone"></i> (012) 345-6789</p>
-        <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-pinterest"></i></a>
-        </div>
-      </div>
+<!-- Enquiry Hero Section -->
+<section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+    <div class="container">
+        <h1>How Can We Help?</h1>
+        <p>Have questions about our products or services? We're here to assist you!</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2023 City Clothing. All rights reserved.</p>
-    </div>
-  </footer>
-  <script>
-    // Mobile menu toggle functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
-        
-        if (menuToggle) {
-            menuToggle.innerHTML = '☰';
-            menuToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-            });
-        }
-        
-        // Close menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-            });
-        });
-    });
-    </script>
+</section>
 
+<!-- Enquiry Section -->
+<section class="featured" style="padding: 5rem 0;">
+    <div class="container">
+        <div class="enquiry-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+            <div class="enquiry-info">
+                <h2 style="margin-bottom: 2rem; font-size: 2rem; color: #333;">Why Contact Us?</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div>
+                            <h3>Product Information</h3>
+                            <p>Get detailed information about our products, materials, sizing, and care instructions.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <div>
+                            <h3>Shipping & Delivery</h3>
+                            <p>Questions about shipping options, delivery times, tracking, or international orders?</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Returns & Exchanges</h3>
+                            <p>Information about our return policy, exchange procedures, and refund timelines.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h3>Wholesale & Bulk</h3>
+                            <p>Interested in wholesale pricing or bulk orders for your business or organization?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-details" style="margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; color: #333;">Other Ways to Reach Us</h3>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone Support</h4>
+                                <p>(012) 345-6789</p>
+                                <span>Mon-Fri, 9AM-6PM | Sat, 10AM-2PM</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Support</h4>
+                                <p>support@cityclothing.com</p>
+                                <span>Response within 24 hours guaranteed</span>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <h4>Live Chat</h4>
+                                <p>Available on website</p>
+                                <span>Mon-Fri, 9AM-5PM for instant help</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="enquiry-form-container">
+                <div class="form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+                
+                <form id="enquiryForm" class="enquiry-form">
+                    <div class="form-group">
+                        <label for="fullName" class="form-label">Full Name *</label>
+                        <input type="text" id="fullName" class="form-input" required>
+                        <div class="form-error" id="nameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" class="form-input" required>
+                        <div class="form-error" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input">
+                        <div class="form-error" id="phoneError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="enquiryType" class="form-label">Enquiry Type *</label>
+                        <select id="enquiryType" class="form-select" required>
+                            <option value="">Select an option</option>
+                            <option value="product">Product Information</option>
+                            <option value="shipping">Shipping & Delivery</option>
+                            <option value="returns">Returns & Exchanges</option>
+                            <option value="wholesale">Wholesale & Bulk Orders</option>
+                            <option value="collaboration">Collaboration Opportunities</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-error" id="typeError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject *</label>
+                        <input type="text" id="subject" class="form-input" required>
+                        <div class="form-error" id="subjectError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" class="form-textarea" rows="6" required></textarea>
+                        <div class="form-error" id="messageError"></div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" class="form-checkbox">
+                        <label for="newsletter" class="checkbox-label">
+                            Subscribe to our newsletter for updates, promotions, and style tips
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Enquiry
+                        </button>
+                        <button type="reset" class="btn btn-outline">
+                            <i class="fas fa-redo"></i>
+                            Reset Form
+                        </button>
+                    </div>
+                    
+                    <div id="enquiryAlert" class="alert" style="display:none;"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Common Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>What is your return policy?</h3>
+                <p>We offer a 30-day return policy for all unworn items with original tags attached. Returns are free for store credit, or you can exchange for a different size or color. Sale items may have different return conditions.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does shipping take?</h3>
+                <p>Standard shipping takes 3-5 business days within the country. Express shipping (1-2 business days) is available for an additional fee. International shipping times vary by location but typically take 7-14 business days.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer international shipping?</h3>
+                <p>Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary depending on the destination. You can calculate shipping costs at checkout before completing your purchase.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I track my order?</h3>
+                <p>Once your order ships, you'll receive a tracking number via email. You can use this to track your package on our website or the carrier's site. You can also track your order by logging into your account.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What payment methods do you accept?</h3>
+                <p>We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, Google Pay, and bank transfers for larger orders. All payments are processed securely through encrypted channels.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you have physical stores?</h3>
+                <p>Yes, we have flagship stores in major cities. Visit our store locator page to find the nearest location. Our physical stores often carry exclusive items not available online.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>City Clothing</h3>
+                <p>Your destination for premium urban fashion and streetwear. Quality meets style in every stitch.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <p><a href="product.html">All Products</a></p>
+                <p><a href="product.html">New Arrivals</a></p>
+                <p><a href="product.html">Best Sellers</a></p>
+                <p><a href="product.html">Sale Items</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="enquiry.html">FAQ</a></p>
+                <p><a href="enquiry.html">Shipping Info</a></p>
+                <p><a href="enquiry.html">Returns</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City Center</p>
+                <p><i class="fas fa-phone"></i> (012) 345-6789</p>
+                <p><i class="fas fa-envelope"></i> info@cityclothing.com</p>
+                <p><i class="fas fa-clock"></i> Mon-Fri: 9AM-6PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 City Clothing. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="js/script.js"></script>
 </body>
 </html>
