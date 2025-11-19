@@ -21,3 +21,5 @@ Images -: Pinterest, 2025.
 Part 2 
 Added style.css then called it on all of my html files tested if my website works on different devices with different screen sizes.
 
+Part 3
+Added functionality, updated product page and about
